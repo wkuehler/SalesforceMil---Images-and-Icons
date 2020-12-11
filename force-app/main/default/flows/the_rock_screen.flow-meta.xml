@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <interviewLabel>the rock screen {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>the rock screen</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>The_Rock_Flow</name>
+        <label>The Rock Flow</label>
+        <locationX>215</locationX>
+        <locationY>255</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>the</name>
+            <fieldText>&lt;p&gt;&lt;img src=&quot;https://media4.giphy.com/media/FVW4ni2wZ9dfy/giphy.gif&quot;&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Crikey_sound</name>
+            <extensionName>c:SoundCMP</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>soundName</name>
+                <value>
+                    <stringValue>Crikey</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>The_Rock_Flow</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>
